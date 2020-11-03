@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="login">
+    <parameter name="email" value="pedja1984@gmail.com"/>
+    <parameter name="pass" value="test123"/>
+    <parameter name="message" value="Dobrodošli, Predrag Popović!"/>
+    <parameter name="lokator" value="div>.welcome-msg>p"/>
+
+    <test name="login">
+        <classes>
+            <class name="homework.WinWin"/>
+        </classes>
+    </test>
+    <test name="email empty">
+        <parameter name="email" value=""/>
+        <parameter name="lokator" value="#advice-required-entry-email"/>
+        <parameter name="message" value="Ovo je obavezno polje."/>
+        <classes>
+            <class name="homework.WinWin"/>
+        </classes>
+    </test>
+    <test name="pass empty">
+        <parameter name="pass" value=""/>
+        <parameter name="lokator" value="#advice-required-entry-pass"/>
+        <parameter name="message" value="Ovo je obavezno polje."/>
+        <classes>
+            <class name="homework.WinWin"/>
+        </classes>
+    </test>
+    <test name="wrong pass">
+        <parameter name="pass" value="test12345"/>
+        <parameter name="lokator" value=".error-msg>ul>li"/>
+        <parameter name="message" value="Email adresa ili lozinka nisu validni."/>
+        <classes>
+            <class name="homework.WinWin"/>
+        </classes>
+    </test>
+    <test name="wrong email">
+        <parameter name="email" value="neki@email.com"/>
+        <parameter name="lokator" value=".error-msg>ul>li"/>
+        <parameter name="message" value="Email adresa ili lozinka nisu validni."/>
+        <classes>
+            <class name="homework.WinWin"/>
+        </classes>
+    </test>
+    <test name="wrong format email">
+        <parameter name="email" value="neki@email"/>
+        <parameter name="lokator" value="#advice-validate-email-email"/>
+        <parameter name="message" value="Molimo unesite ispravnu email adresu. Npr. milanpetrovic@domen.com."/>
+        <classes>
+            <class name="homework.WinWin"/>
+        </classes>
+    </test>
+
+
+
+
+
+
+</suite>

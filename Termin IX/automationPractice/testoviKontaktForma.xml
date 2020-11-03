@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testovi Kontakt Forme">
+    <parameter name="email" value="neki@email.com"/>
+    <parameter name="orderID" value="ID-123"/>
+    <parameter name="message" value="Neki random tekst"/>
+    <parameter name="alertMessage" value="Your message has been successfully sent to our team."/>
+    <parameter name="alertSelektor" value=".alert.alert-success"/>
+    <parameter name="subjectValue" value="Customer service"/>
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Chrome-Happy Flow">
+        <classes>
+         <class name="automationPractice.TestoviKontakt"/>
+        </classes>
+    </test>
+    <test name="Chrome-Email space">
+        <parameter name="email" value=" "/>
+        <parameter name="alertMessage" value="Invalid email address."/>
+        <parameter name="alertSelektor" value=".alert.alert-danger>ol>li"/>
+        <classes>
+            <class name="automationPractice.TestoviKontakt"/>
+        </classes>
+    </test>
+    <test name="Chrome-Message empty">
+        <parameter name="message" value=""/>
+        <parameter name="alertMessage" value="The message cannot be blank."/>
+        <parameter name="alertSelektor" value=".alert.alert-danger>ol>li"/>
+        <classes>
+            <class name="automationPractice.TestoviKontakt"/>
+        </classes>
+    </test>
+    <test name="Chrome-Without Subject">
+        <parameter name="subjectValue" value="-- Choose --"/>
+        <parameter name="alertMessage" value="Please select a subject from the list provided."/>
+        <parameter name="alertSelektor" value=".alert.alert-danger>ol>li"/>
+        <classes>
+            <class name="automationPractice.TestoviKontakt"/>
+        </classes>
+    </test>
+
+    <test name="Firefox-Happy Flow">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="automationPractice.TestoviKontakt"/>
+        </classes>
+    </test>
+    <test name="Firefox-Email space">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="email" value=" "/>
+        <parameter name="alertMessage" value="Invalid email address."/>
+        <parameter name="alertSelektor" value=".alert.alert-danger>ol>li"/>
+        <classes>
+            <class name="automationPractice.TestoviKontakt"/>
+        </classes>
+    </test>
+    <test name="Firefox-Message empty">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="message" value=""/>
+        <parameter name="alertMessage" value="The message cannot be blank."/>
+        <parameter name="alertSelektor" value=".alert.alert-danger>ol>li"/>
+        <classes>
+            <class name="automationPractice.TestoviKontakt"/>
+        </classes>
+    </test>
+    <test name="Firefox-Without Subject">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="subjectValue" value="-- Choose --"/>
+        <parameter name="alertMessage" value="Please select a subject from the list provided."/>
+        <parameter name="alertSelektor" value=".alert.alert-danger>ol>li"/>
+        <classes>
+            <class name="automationPractice.TestoviKontakt"/>
+        </classes>
+    </test>
+
+
+</suite>

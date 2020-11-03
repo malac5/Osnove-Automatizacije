@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Kalkulator">
+
+    <test name="sabiranje i oduzimanje">
+        <parameter name="sab1" value="20"/>
+        <parameter name="sab2" value="10"/>
+        <parameter name="umanjenik" value="40"/>
+        <parameter name="umanjilac" value="10"/>
+        <classes>
+            <class name="Kalkulator.SabiranjeOduzimanje"/>
+        </classes>
+    </test>
+    <test name="sabiranje">
+        <parameter name="sab1" value="10"/>
+        <parameter name="sab2" value="5"/>
+        <classes>
+            <class name="Kalkulator.SabiranjeOduzimanje">
+                <methods>
+                    <exclude name="oduzmi"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="oduzimanje">
+        <parameter name="umanjenik" value="30"/>
+        <parameter name="umanjilac" value="10"/>
+        <classes>
+            <class name="Kalkulator.SabiranjeOduzimanje">
+                <methods>
+                    <exclude name="saberi"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="pomnozi">
+        <parameter name="cin1" value="5"/>
+        <parameter name="cin2" value="10"/>
+        <classes>
+            <class name="Kalkulator.Mnozenje"/>
+        </classes>
+    </test>
+
+</suite>
