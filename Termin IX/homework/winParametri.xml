@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="login">
-    <parameter name="email" value="pedja1984@gmail.com"/>
+    <parameter name="email" value="malac5445@gmail.com"/>
     <parameter name="pass" value="test123"/>
-    <parameter name="message" value="Dobrodošli, Predrag Popović!"/>
+    <parameter name="message" value="Dobrodošli, Marija Miletic!"/>
     <parameter name="lokator" value="div>.welcome-msg>p"/>
 
     <test name="login">
