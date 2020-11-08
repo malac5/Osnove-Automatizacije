@@ -26,7 +26,7 @@ public class Base {
         System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver.exe");
         FirefoxOptions options= new FirefoxOptions();
         options.addArguments("--headless");
-        options.addArguments("window-size=1920,1080");
+        options.addArguments("--window-size=1920,1080");
         driver=new FirefoxDriver(options);
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.get(URL);
