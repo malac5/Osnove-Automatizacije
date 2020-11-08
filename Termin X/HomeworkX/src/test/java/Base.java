@@ -17,7 +17,7 @@ public class Base {
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver.exe");
         ChromeOptions options= new ChromeOptions();
         options.addArguments("headless");
-        options.addArguments("window-size=1920,1080");
+        options.addArguments("--window-size=1920,1080");
         driver=new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(URL);
