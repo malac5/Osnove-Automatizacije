@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Parallel test" parallel="methods" thread-count="2">
+<suite name="Parallel tests" parallel="methods" thread-count="2">
     <parameter name="emailLokator" value="#email"/>
     <parameter name="email" value="malac5445@gmail.com"/>
     <parameter name="passLokator" value="#pass"/>
@@ -8,30 +8,30 @@
     <parameter name="btnLokator" value="#send2"/>
     <parameter name="messageLokator" value=".welcome-msg>p:nth-child(1)"/>
     <parameter name="message" value="Dobrodošli, Marija Miletic!"/>
-    <test name="successful chrome">
+    <test name="Successful login-Chrome">
         <classes>
             <class name="Chrome">
                 <methods><exclude name="loginFailChrome"/></methods>
             </class>
         </classes>
     </test>
-    <test name="failed login Chrome">
-        <parameter name="pass" value="testasds123"/>
+    <test name="Failed login-Chrome">
+        <parameter name="pass" value="test123wrong"/>
         <classes>
             <class name="Chrome">
                 <methods><exclude name="loginSuccessfullyChrome"/></methods>
             </class>
         </classes>
     </test>
-    <test name="successful firefox">
+    <test name="Successful login-Firefox">
         <classes>
             <class name="Firefox">
                 <methods><exclude name="loginFailFirefox"/></methods>
             </class>
         </classes>
     </test>
-    <test name="failed login Firefox">
-        <parameter name="pass" value="testasds123"/>
+    <test name="Failed login-Firefox">
+        <parameter name="pass" value="test123wrong"/>
         <classes>
             <class name="Firefox">
                 <methods><exclude name="loginSuccessfullyFirefox"/></methods>
