@@ -2,7 +2,7 @@ package TerminIII;
 
 import java.util.Scanner;
 
-public class Kalkulator2 {
+public class KalkulatorScanner {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Unesite prvi broj: ");
