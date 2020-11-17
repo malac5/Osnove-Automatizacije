@@ -2,7 +2,7 @@ package TerminIII;
 
 import java.io.Console;
 
-public class Kalkulator {
+public class KalkulatorConsole {
     public static void main(String[] args) {
         Console terminal=System.console();
         terminal.writer().println("Enter first operand:");
