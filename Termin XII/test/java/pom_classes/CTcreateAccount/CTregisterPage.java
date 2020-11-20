@@ -16,9 +16,7 @@ public class CTregisterPage {
 
     private By cMessageContainer= By.cssSelector(".alert.alert-success>p");
     
-
     public void checkMessage(String cMessage){
-        //getCmessageText();
         Assert.assertEquals(driver.findElement(cMessageContainer).getText(),cMessage);
     }
 
